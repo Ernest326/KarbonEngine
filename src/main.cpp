@@ -1,11 +1,13 @@
 #include "App/app.hpp"
 
-//std
+//std Includes
 #include <cstdlib>
 #include <iostream>
 #include <stdexcept>
 
+
 int main() {
+
     spark::App app{};
 
     try {
@@ -16,4 +18,5 @@ int main() {
     }
 
     return EXIT_SUCCESS;
+
 }

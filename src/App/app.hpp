@@ -15,6 +15,6 @@ public:
 private:
     Window window{WIDTH, HEIGHT, "Spark!"};
 
-}
+};
 
 }

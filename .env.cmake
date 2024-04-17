@@ -1,3 +1,3 @@
-set(GLFW_PATH ${PROJECT_SOURCE_DIR}/Libraries/glfw-3.4)
-set(GLM_PATH ${PROJECT_SOURCE_DIR}/Libraries/glm)
+set(GLFW_PATH ./Libraries/glfw-3.4)
+set(GLM_PATH ./Libraries/glm)
 set(VULKAN_SDK_PATH C:/VulkanSDK/1.3.280.0)

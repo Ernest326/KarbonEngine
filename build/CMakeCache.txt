@@ -77,7 +77,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/Ernest/Documents/SparkEngine/build/CMakeFiles/pkgRedirects
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Project
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/SparkEngine
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/link.exe
@@ -112,7 +112,22 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=SparkEngine
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=0.23.0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=23
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //RC compiler
 CMAKE_RC_COMPILER:FILEPATH=rc
@@ -186,13 +201,13 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Project_BINARY_DIR:STATIC=C:/Users/Ernest/Documents/SparkEngine/build
+SparkEngine_BINARY_DIR:STATIC=C:/Users/Ernest/Documents/SparkEngine/build
 
 //Value Computed by CMake
-Project_IS_TOP_LEVEL:STATIC=ON
+SparkEngine_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-Project_SOURCE_DIR:STATIC=C:/Users/Ernest/Documents/SparkEngine
+SparkEngine_SOURCE_DIR:STATIC=C:/Users/Ernest/Documents/SparkEngine
 
 
 ########################
