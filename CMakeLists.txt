@@ -1,14 +1,11 @@
-###############################################################################
-# CMAKELists File taken from littleVulkanEngine by blurrypiano                #
-# https://github.com/blurrypiano/littleVulkanEngine/blob/main/CMakeLists.txt  #
-###############################################################################
+#CMakeLists file taken from https://github.com/blurrypiano/littleVulkanEngine/ and used in this project
 
 include(./.env.cmake OPTIONAL RESULT_VARIABLE LOCAL_ENV)
 message(STATUS "Local .env.cmake: ${LOCAL_ENV}")
 
 cmake_minimum_required(VERSION 3.11.0)
 
-set(NAME SparkEngine)
+set(NAME LveEngine)
 
 message(STATUS "using ${CMAKE_GENERATOR}")
 if (CMAKE_GENERATOR STREQUAL "MinGW Makefiles")
@@ -116,9 +113,8 @@ endif()
 # Find all vertex and fragment sources within shaders directory
 # taken from VBlancos vulkan tutorial
 # https://github.com/vblanco20-1/vulkan-guide/blob/all-chapters/CMakeLists.txt
-
-# ${Vulkan_GLSLANG_VALIDATOR_EXECUTABLE} 
 # find_program(GLSL_VALIDATOR glslangValidator HINTS 
+#   ${Vulkan_GLSLANG_VALIDATOR_EXECUTABLE} 
 #   /usr/bin 
 #   /usr/local/bin 
 #   ${VULKAN_SDK_PATH}/Bin

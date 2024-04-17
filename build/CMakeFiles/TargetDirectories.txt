@@ -1,0 +1,2 @@
+C:/Users/Ernest/Documents/SparkEngine/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Ernest/Documents/SparkEngine/build/CMakeFiles/ZERO_CHECK.dir
