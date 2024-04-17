@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SparkEngine.dir/src/App/app.cpp.obj.d"
   "CMakeFiles/SparkEngine.dir/src/App/window.cpp.obj"
   "CMakeFiles/SparkEngine.dir/src/App/window.cpp.obj.d"
+  "CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj"
+  "CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj.d"
   "CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj"
   "CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj.d"
   "CMakeFiles/SparkEngine.dir/src/main.cpp.obj"

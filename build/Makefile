@@ -189,6 +189,30 @@ src/App/window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/App/window.cpp.s
 .PHONY : src/App/window.cpp.s
 
+src/Core/pipeline.obj: src/Core/pipeline.cpp.obj
+.PHONY : src/Core/pipeline.obj
+
+# target to build an object file
+src/Core/pipeline.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj
+.PHONY : src/Core/pipeline.cpp.obj
+
+src/Core/pipeline.i: src/Core/pipeline.cpp.i
+.PHONY : src/Core/pipeline.i
+
+# target to preprocess a source file
+src/Core/pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.i
+.PHONY : src/Core/pipeline.cpp.i
+
+src/Core/pipeline.s: src/Core/pipeline.cpp.s
+.PHONY : src/Core/pipeline.s
+
+# target to generate assembly for a file
+src/Core/pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.s
+.PHONY : src/Core/pipeline.cpp.s
+
 src/Core/spark_device.obj: src/Core/spark_device.cpp.obj
 .PHONY : src/Core/spark_device.obj
 
@@ -253,6 +277,9 @@ help:
 	@echo ... src/App/window.obj
 	@echo ... src/App/window.i
 	@echo ... src/App/window.s
+	@echo ... src/Core/pipeline.obj
+	@echo ... src/Core/pipeline.i
+	@echo ... src/Core/pipeline.s
 	@echo ... src/Core/spark_device.obj
 	@echo ... src/Core/spark_device.i
 	@echo ... src/Core/spark_device.s
