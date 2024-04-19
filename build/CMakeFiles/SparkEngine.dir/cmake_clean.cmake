@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj.d"
   "CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj"
   "CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj.d"
+  "CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj"
+  "CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj.d"
   "CMakeFiles/SparkEngine.dir/src/main.cpp.obj"
   "CMakeFiles/SparkEngine.dir/src/main.cpp.obj.d"
   "SparkEngine.exe"

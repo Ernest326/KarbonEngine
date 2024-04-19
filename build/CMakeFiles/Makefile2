@@ -81,12 +81,12 @@ clean: CMakeFiles/Shaders.dir/clean
 CMakeFiles/SparkEngine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles --progress-num=3,4,5,6,7,8 "Built target SparkEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles --progress-num=3,4,5,6,7,8,9 "Built target SparkEngine"
 .PHONY : CMakeFiles/SparkEngine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SparkEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SparkEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles 0
 .PHONY : CMakeFiles/SparkEngine.dir/rule

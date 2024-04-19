@@ -237,6 +237,30 @@ src/Core/spark_device.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.s
 .PHONY : src/Core/spark_device.cpp.s
 
+src/Core/swapchain.obj: src/Core/swapchain.cpp.obj
+.PHONY : src/Core/swapchain.obj
+
+# target to build an object file
+src/Core/swapchain.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj
+.PHONY : src/Core/swapchain.cpp.obj
+
+src/Core/swapchain.i: src/Core/swapchain.cpp.i
+.PHONY : src/Core/swapchain.i
+
+# target to preprocess a source file
+src/Core/swapchain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.i
+.PHONY : src/Core/swapchain.cpp.i
+
+src/Core/swapchain.s: src/Core/swapchain.cpp.s
+.PHONY : src/Core/swapchain.s
+
+# target to generate assembly for a file
+src/Core/swapchain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.s
+.PHONY : src/Core/swapchain.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -283,6 +307,9 @@ help:
 	@echo ... src/Core/spark_device.obj
 	@echo ... src/Core/spark_device.i
 	@echo ... src/Core/spark_device.s
+	@echo ... src/Core/swapchain.obj
+	@echo ... src/Core/swapchain.i
+	@echo ... src/Core/swapchain.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

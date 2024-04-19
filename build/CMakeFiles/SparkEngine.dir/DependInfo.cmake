@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Ernest/Documents/SparkEngine/src/App/window.cpp" "CMakeFiles/SparkEngine.dir/src/App/window.cpp.obj" "gcc" "CMakeFiles/SparkEngine.dir/src/App/window.cpp.obj.d"
   "C:/Users/Ernest/Documents/SparkEngine/src/Core/pipeline.cpp" "CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj" "gcc" "CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj.d"
   "C:/Users/Ernest/Documents/SparkEngine/src/Core/spark_device.cpp" "CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj" "gcc" "CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj.d"
+  "C:/Users/Ernest/Documents/SparkEngine/src/Core/swapchain.cpp" "CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj" "gcc" "CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj.d"
   "C:/Users/Ernest/Documents/SparkEngine/src/main.cpp" "CMakeFiles/SparkEngine.dir/src/main.cpp.obj" "gcc" "CMakeFiles/SparkEngine.dir/src/main.cpp.obj.d"
   )
 
