@@ -55,6 +55,21 @@
         "xstddef": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
-        "xutility": "cpp"
-    }
+        "xutility": "cpp",
+        "array": "cpp",
+        "charconv": "cpp",
+        "format": "cpp",
+        "fstream": "cpp",
+        "map": "cpp",
+        "mutex": "cpp",
+        "ratio": "cpp",
+        "set": "cpp",
+        "span": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp",
+        "unordered_set": "cpp",
+        "xtree": "cpp"
+    },
+    "cmake.configureOnOpen": false
 }

@@ -1,7 +1,9 @@
 CMakeFiles/SparkEngine.dir/src/App/app.cpp.obj: \
  C:\Users\Ernest\Documents\SparkEngine\src\App\app.cpp \
  C:\Users\Ernest\Documents\SparkEngine\src\App\app.hpp \
- C:\Users\Ernest\Documents\SparkEngine\src\App\window.hpp \
+ C:/Users/Ernest/Documents/SparkEngine/src/Core/pipeline.hpp \
+ C:/Users/Ernest/Documents/SparkEngine/src/Core/spark_device.hpp \
+ C:/Users/Ernest/Documents/SparkEngine/src/App/window.hpp \
  C:/Users/Ernest/Documents/SparkEngine/Libraries/glfw-3.4/include/GLFW/glfw3.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
  C:/msys64/ucrt64/include/stddef.h C:/msys64/ucrt64/include/crtdefs.h \
@@ -114,4 +116,9 @@ CMakeFiles/SparkEngine.dir/src/App/app.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/cstddef \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
- C:/msys64/ucrt64/include/c++/13.2.0/tuple
+ C:/msys64/ucrt64/include/c++/13.2.0/tuple \
+ C:/msys64/ucrt64/include/c++/13.2.0/vector \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_uninitialized.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc

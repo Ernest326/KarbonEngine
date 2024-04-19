@@ -65,6 +65,20 @@ include CMakeFiles/Shaders.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/Shaders.dir/progress.make
 
+CMakeFiles/Shaders: C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.frag.spv
+CMakeFiles/Shaders: C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.vert.spv
+
+C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.frag.spv: C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.frag
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.frag.spv"
+	C:\VulkanSDK\1.3.280.0\Bin\glslangValidator.exe -V C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.frag -o C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.frag.spv
+
+C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.vert.spv: C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.vert
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.vert.spv"
+	C:\VulkanSDK\1.3.280.0\Bin\glslangValidator.exe -V C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.vert -o C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.vert.spv
+
+Shaders: CMakeFiles/Shaders
+Shaders: C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.frag.spv
+Shaders: C:/Users/Ernest/Documents/SparkEngine/shaders/test_shader.vert.spv
 Shaders: CMakeFiles/Shaders.dir/build.make
 .PHONY : Shaders
 

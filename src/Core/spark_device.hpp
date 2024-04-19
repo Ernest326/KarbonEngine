@@ -6,6 +6,10 @@
 #include <string>
 #include <vector>
 
+
+//VULKAN DEVICE INITIALIZATION
+//Important header which loads all the necessary Vulkan functions, defines the device and validates Vulkan support
+
 namespace spark {
 
 struct SwapChainSupportDetails {

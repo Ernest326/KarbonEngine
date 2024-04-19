@@ -1,6 +1,8 @@
 #pragma once
 
+#include "../Core/pipeline.hpp"
 #include "window.hpp"
+#include "../Core/spark_device.hpp"
 
 namespace spark {
 
@@ -14,6 +16,13 @@ public:
 
 private:
     Window window{WIDTH, HEIGHT, "Spark!"};
+    SparkDevice device{window};
+    Pipeline pipeline {
+        device,
+        "../../shaders/test_shader.vert.spv",
+        "../../shaders/test_shader.frag.spv",
+        Pipeline::defaultPipelineConfigInfo(WIDTH, HEIGHT)
+    };
 
 };
 
