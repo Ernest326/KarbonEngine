@@ -1,4 +1,0 @@
-C:/Users/Ernest/Documents/SparkEngine/build/CMakeFiles/SparkEngine.dir
-C:/Users/Ernest/Documents/SparkEngine/build/CMakeFiles/Shaders.dir
-C:/Users/Ernest/Documents/SparkEngine/build/CMakeFiles/edit_cache.dir
-C:/Users/Ernest/Documents/SparkEngine/build/CMakeFiles/rebuild_cache.dir
