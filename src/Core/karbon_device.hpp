@@ -10,7 +10,7 @@
 //VULKAN DEVICE INITIALIZATION
 //Important header which loads all the necessary Vulkan functions, defines the device and validates Vulkan support
 
-namespace spark {
+namespace karbon {
 
 struct SwapChainSupportDetails {
   VkSurfaceCapabilitiesKHR capabilities;

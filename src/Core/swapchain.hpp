@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-namespace spark {
+namespace karbon {
 
 class SparkSwapChain {
  public:
