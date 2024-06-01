@@ -6,15 +6,15 @@
 //Main graphics pipeline, used for creating shaders, passing info and defining settings
 namespace karbon {
 
-Pipeline::Pipeline(SparkDevice &device, const std::string& vert, const std::string& frag, const PipelineConfigInfo& configInfo) : sparkDevice{device} {
+Pipeline::Pipeline(KarbonDevice &device, const std::string& vert, const std::string& frag, const PipelineConfigInfo& configInfo) : karbonDevice{device} {
     createGraphicsPipeline(vert, frag, configInfo);
 }
 
 //Cleanup deconstructor
 Pipeline::~Pipeline() {
-    vkDestroyShaderModule(sparkDevice.device(), vertShaderModule, nullptr);
-    vkDestroyShaderModule(sparkDevice.device(), fragShaderModule, nullptr);
-    vkDestroyPipeline(sparkDevice.device(), graphicsPipeline, nullptr);
+    vkDestroyShaderModule(karbonDevice.device(), vertShaderModule, nullptr);
+    vkDestroyShaderModule(karbonDevice.device(), fragShaderModule, nullptr);
+    vkDestroyPipeline(karbonDevice.device(), graphicsPipeline, nullptr);
 }
 
 //File reading helper function used for reading compiled shader code
@@ -96,7 +96,7 @@ void Pipeline::createGraphicsPipeline(const std::string& vert, const std::string
     pipelineInfo.basePipelineHandle = VK_NULL_HANDLE;
 
     //Create the graphics pipeline using the given info
-    if (vkCreateGraphicsPipelines(sparkDevice.device(), VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &graphicsPipeline) != VK_SUCCESS) {
+    if (vkCreateGraphicsPipelines(karbonDevice.device(), VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &graphicsPipeline) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create Graphics Pipeline!");
     }
 
@@ -109,7 +109,7 @@ void Pipeline::createShaderModule(const std::vector<char>& code, VkShaderModule*
     createInfo.codeSize = code.size();
     createInfo.pCode = reinterpret_cast<const uint32_t*>(code.data());
     
-    if(vkCreateShaderModule(sparkDevice.device(), &createInfo, nullptr, shaderModule) != VK_SUCCESS) {
+    if(vkCreateShaderModule(karbonDevice.device(), &createInfo, nullptr, shaderModule) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create shader module!");
     }
 }

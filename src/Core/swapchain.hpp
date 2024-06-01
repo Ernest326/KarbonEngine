@@ -1,6 +1,6 @@
 #pragma once
 
-#include "spark_device.hpp"
+#include "karbon_device.hpp"
 
 #include <vulkan/vulkan.h>
 
@@ -9,15 +9,15 @@
 
 namespace karbon {
 
-class SparkSwapChain {
+class KarbonSwapChain {
  public:
   static constexpr int MAX_FRAMES_IN_FLIGHT = 2;
 
-  SparkSwapChain(SparkDevice &deviceRef, VkExtent2D windowExtent);
-  ~SparkSwapChain();
+  KarbonSwapChain(KarbonDevice &deviceRef, VkExtent2D windowExtent);
+  ~KarbonSwapChain();
 
-  SparkSwapChain(const SparkSwapChain &) = delete;
-  void operator=(const SparkSwapChain &) = delete;
+  KarbonSwapChain(const KarbonSwapChain &) = delete;
+  void operator=(const KarbonSwapChain &) = delete;
 
   VkFramebuffer getFrameBuffer(int index) { return swapChainFramebuffers[index]; }
   VkRenderPass getRenderPass() { return renderPass; }
@@ -63,7 +63,7 @@ class SparkSwapChain {
   std::vector<VkImage> swapChainImages;
   std::vector<VkImageView> swapChainImageViews;
 
-  SparkDevice &device;
+  KarbonDevice &device;
   VkExtent2D windowExtent;
 
   VkSwapchainKHR swapChain;

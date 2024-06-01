@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core/spark_device.hpp"
+#include "../Core/karbon_device.hpp"
 #include "../Core/pipeline.hpp"
 #include "../Core/swapchain.hpp"
 #include "window.hpp"
@@ -31,9 +31,9 @@ private:
     void drawFrame();
 
     Window window{WIDTH, HEIGHT, "Spark!"};
-    SparkDevice sparkDevice{window};
-    SparkSwapChain sparkSwapChain { sparkDevice, window.getExtent() };
-    std::unique_ptr<Pipeline> sparkPipeline;
+    KarbonDevice karbonDevice{window};
+    KarbonSwapChain karbonSwapChain { karbonDevice, window.getExtent() };
+    std::unique_ptr<Pipeline> karbonPipeline;
     VkPipelineLayout pipelineLayout;
     std::vector<VkCommandBuffer> commandBuffers;
 

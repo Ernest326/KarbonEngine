@@ -12,7 +12,7 @@
 //Main Swapchain class in order to create framebuffers and swap between them
 namespace karbon {
 
-SparkSwapChain::SparkSwapChain(SparkDevice &deviceRef, VkExtent2D extent)
+KarbonSwapChain::KarbonSwapChain(KarbonDevice &deviceRef, VkExtent2D extent)
     : device{deviceRef}, windowExtent{extent} {
   createSwapChain();
   createImageViews();
@@ -22,7 +22,7 @@ SparkSwapChain::SparkSwapChain(SparkDevice &deviceRef, VkExtent2D extent)
   createSyncObjects();
 }
 
-SparkSwapChain::~SparkSwapChain() {
+KarbonSwapChain::~KarbonSwapChain() {
   for (auto imageView : swapChainImageViews) {
     vkDestroyImageView(device.device(), imageView, nullptr);
   }
@@ -53,7 +53,7 @@ SparkSwapChain::~SparkSwapChain() {
   }
 }
 
-VkResult SparkSwapChain::acquireNextImage(uint32_t *imageIndex) {
+VkResult KarbonSwapChain::acquireNextImage(uint32_t *imageIndex) {
   vkWaitForFences(
       device.device(),
       1,
@@ -72,7 +72,7 @@ VkResult SparkSwapChain::acquireNextImage(uint32_t *imageIndex) {
   return result;
 }
 
-VkResult SparkSwapChain::submitCommandBuffers(
+VkResult KarbonSwapChain::submitCommandBuffers(
     const VkCommandBuffer *buffers, uint32_t *imageIndex) {
   if (imagesInFlight[*imageIndex] != VK_NULL_HANDLE) {
     vkWaitForFences(device.device(), 1, &imagesInFlight[*imageIndex], VK_TRUE, UINT64_MAX);
@@ -120,7 +120,7 @@ VkResult SparkSwapChain::submitCommandBuffers(
   return result;
 }
 
-void SparkSwapChain::createSwapChain() {
+void KarbonSwapChain::createSwapChain() {
   SwapChainSupportDetails swapChainSupport = device.getSwapChainSupport();
 
   VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
@@ -181,7 +181,7 @@ void SparkSwapChain::createSwapChain() {
   swapChainExtent = extent;
 }
 
-void SparkSwapChain::createImageViews() {
+void KarbonSwapChain::createImageViews() {
   swapChainImageViews.resize(swapChainImages.size());
   for (size_t i = 0; i < swapChainImages.size(); i++) {
     VkImageViewCreateInfo viewInfo{};
@@ -202,7 +202,7 @@ void SparkSwapChain::createImageViews() {
   }
 }
 
-void SparkSwapChain::createRenderPass() {
+void KarbonSwapChain::createRenderPass() {
   VkAttachmentDescription depthAttachment{};
   depthAttachment.format = findDepthFormat();
   depthAttachment.samples = VK_SAMPLE_COUNT_1_BIT;
@@ -263,7 +263,7 @@ void SparkSwapChain::createRenderPass() {
   }
 }
 
-void SparkSwapChain::createFramebuffers() {
+void KarbonSwapChain::createFramebuffers() {
   swapChainFramebuffers.resize(imageCount());
   for (size_t i = 0; i < imageCount(); i++) {
     std::array<VkImageView, 2> attachments = {swapChainImageViews[i], depthImageViews[i]};
@@ -288,7 +288,7 @@ void SparkSwapChain::createFramebuffers() {
   }
 }
 
-void SparkSwapChain::createDepthResources() {
+void KarbonSwapChain::createDepthResources() {
   VkFormat depthFormat = findDepthFormat();
   VkExtent2D swapChainExtent = getSwapChainExtent();
 
@@ -336,7 +336,7 @@ void SparkSwapChain::createDepthResources() {
   }
 }
 
-void SparkSwapChain::createSyncObjects() {
+void KarbonSwapChain::createSyncObjects() {
   imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
   renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
   inFlightFences.resize(MAX_FRAMES_IN_FLIGHT);
@@ -360,7 +360,7 @@ void SparkSwapChain::createSyncObjects() {
   }
 }
 
-VkSurfaceFormatKHR SparkSwapChain::chooseSwapSurfaceFormat(
+VkSurfaceFormatKHR KarbonSwapChain::chooseSwapSurfaceFormat(
     const std::vector<VkSurfaceFormatKHR> &availableFormats) {
   for (const auto &availableFormat : availableFormats) {
     if (availableFormat.format == VK_FORMAT_B8G8R8A8_UNORM &&
@@ -372,7 +372,7 @@ VkSurfaceFormatKHR SparkSwapChain::chooseSwapSurfaceFormat(
   return availableFormats[0];
 }
 
-VkPresentModeKHR SparkSwapChain::chooseSwapPresentMode(
+VkPresentModeKHR KarbonSwapChain::chooseSwapPresentMode(
     const std::vector<VkPresentModeKHR> &availablePresentModes) {
 
   //Triple buffer present mode
@@ -398,7 +398,7 @@ VkPresentModeKHR SparkSwapChain::chooseSwapPresentMode(
   return VK_PRESENT_MODE_FIFO_KHR;
 }
 
-VkExtent2D SparkSwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR &capabilities) {
+VkExtent2D KarbonSwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR &capabilities) {
   if (capabilities.currentExtent.width != std::numeric_limits<uint32_t>::max()) {
     return capabilities.currentExtent;
   } else {
@@ -414,7 +414,7 @@ VkExtent2D SparkSwapChain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR &capa
   }
 }
 
-VkFormat SparkSwapChain::findDepthFormat() {
+VkFormat KarbonSwapChain::findDepthFormat() {
   return device.findSupportedFormat(
       {VK_FORMAT_D32_SFLOAT, VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_UNORM_S8_UINT},
       VK_IMAGE_TILING_OPTIMAL,

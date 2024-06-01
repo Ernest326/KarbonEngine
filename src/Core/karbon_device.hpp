@@ -26,7 +26,7 @@ struct QueueFamilyIndices {
   bool isComplete() { return graphicsFamilyHasValue && presentFamilyHasValue; }
 };
 
-class SparkDevice {
+class KarbonDevice {
  public:
 #ifdef NDEBUG
   const bool enableValidationLayers = false;
@@ -34,14 +34,14 @@ class SparkDevice {
   const bool enableValidationLayers = true;
 #endif
 
-  SparkDevice(Window &window);
-  ~SparkDevice();
+  KarbonDevice(Window &window);
+  ~KarbonDevice();
 
   // Not copyable or movable
-  SparkDevice(const SparkDevice &) = delete;
-  void operator=(const SparkDevice &) = delete;
-  SparkDevice(SparkDevice &&) = delete;
-  SparkDevice &operator=(SparkDevice &&) = delete;
+  KarbonDevice(const KarbonDevice &) = delete;
+  void operator=(const KarbonDevice &) = delete;
+  KarbonDevice(KarbonDevice &&) = delete;
+  KarbonDevice &operator=(KarbonDevice &&) = delete;
 
   VkCommandPool getCommandPool() { return commandPool; }
   VkDevice device() { return device_; }

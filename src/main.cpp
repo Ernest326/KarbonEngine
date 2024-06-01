@@ -8,7 +8,7 @@
 
 int main() {
 
-    spark::App app{};
+    karbon::App app{};
 
     try {
         app.run();
