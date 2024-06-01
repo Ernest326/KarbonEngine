@@ -2,7 +2,7 @@
 #include <stdexcept>
 #include <array>
 
-namespace spark {
+namespace karbon {
 
 App::App() {
     createPipelineLayout();

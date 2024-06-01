@@ -4,7 +4,7 @@
 #include <stdexcept>
 
 //Main graphics pipeline, used for creating shaders, passing info and defining settings
-namespace spark {
+namespace karbon {
 
 Pipeline::Pipeline(SparkDevice &device, const std::string& vert, const std::string& frag, const PipelineConfigInfo& configInfo) : sparkDevice{device} {
     createGraphicsPipeline(vert, frag, configInfo);

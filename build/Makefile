@@ -189,6 +189,30 @@ src/App/window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/App/window.cpp.s
 .PHONY : src/App/window.cpp.s
 
+src/Core/karbon_device.obj: src/Core/karbon_device.cpp.obj
+.PHONY : src/Core/karbon_device.obj
+
+# target to build an object file
+src/Core/karbon_device.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj
+.PHONY : src/Core/karbon_device.cpp.obj
+
+src/Core/karbon_device.i: src/Core/karbon_device.cpp.i
+.PHONY : src/Core/karbon_device.i
+
+# target to preprocess a source file
+src/Core/karbon_device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.i
+.PHONY : src/Core/karbon_device.cpp.i
+
+src/Core/karbon_device.s: src/Core/karbon_device.cpp.s
+.PHONY : src/Core/karbon_device.s
+
+# target to generate assembly for a file
+src/Core/karbon_device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.s
+.PHONY : src/Core/karbon_device.cpp.s
+
 src/Core/pipeline.obj: src/Core/pipeline.cpp.obj
 .PHONY : src/Core/pipeline.obj
 
@@ -212,30 +236,6 @@ src/Core/pipeline.s: src/Core/pipeline.cpp.s
 src/Core/pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.s
 .PHONY : src/Core/pipeline.cpp.s
-
-src/Core/spark_device.obj: src/Core/spark_device.cpp.obj
-.PHONY : src/Core/spark_device.obj
-
-# target to build an object file
-src/Core/spark_device.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj
-.PHONY : src/Core/spark_device.cpp.obj
-
-src/Core/spark_device.i: src/Core/spark_device.cpp.i
-.PHONY : src/Core/spark_device.i
-
-# target to preprocess a source file
-src/Core/spark_device.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.i
-.PHONY : src/Core/spark_device.cpp.i
-
-src/Core/spark_device.s: src/Core/spark_device.cpp.s
-.PHONY : src/Core/spark_device.s
-
-# target to generate assembly for a file
-src/Core/spark_device.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SparkEngine.dir\build.make CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.s
-.PHONY : src/Core/spark_device.cpp.s
 
 src/Core/swapchain.obj: src/Core/swapchain.cpp.obj
 .PHONY : src/Core/swapchain.obj
@@ -301,12 +301,12 @@ help:
 	@echo ... src/App/window.obj
 	@echo ... src/App/window.i
 	@echo ... src/App/window.s
+	@echo ... src/Core/karbon_device.obj
+	@echo ... src/Core/karbon_device.i
+	@echo ... src/Core/karbon_device.s
 	@echo ... src/Core/pipeline.obj
 	@echo ... src/Core/pipeline.i
 	@echo ... src/Core/pipeline.s
-	@echo ... src/Core/spark_device.obj
-	@echo ... src/Core/spark_device.i
-	@echo ... src/Core/spark_device.s
 	@echo ... src/Core/swapchain.obj
 	@echo ... src/Core/swapchain.i
 	@echo ... src/Core/swapchain.s

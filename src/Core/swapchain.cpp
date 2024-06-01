@@ -10,7 +10,7 @@
 
 
 //Main Swapchain class in order to create framebuffers and swap between them
-namespace spark {
+namespace karbon {
 
 SparkSwapChain::SparkSwapChain(SparkDevice &deviceRef, VkExtent2D extent)
     : device{deviceRef}, windowExtent{extent} {

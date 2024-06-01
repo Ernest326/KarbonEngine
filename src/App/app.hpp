@@ -8,7 +8,7 @@
 #include <memory>
 #include <vector>
 
-namespace spark {
+namespace karbon {
 
 class App {
 

@@ -5,7 +5,7 @@
 
 #include <string>
 
-namespace spark {
+namespace karbon {
 
 class Window {
 

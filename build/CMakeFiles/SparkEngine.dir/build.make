@@ -98,11 +98,26 @@ CMakeFiles/SparkEngine.dir/src/App/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SparkEngine.dir/src/App/window.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ernest\Documents\SparkEngine\src\App\window.cpp -o CMakeFiles\SparkEngine.dir\src\App\window.cpp.s
 
+CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj: CMakeFiles/SparkEngine.dir/flags.make
+CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj: CMakeFiles/SparkEngine.dir/includes_CXX.rsp
+CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj: C:/Users/Ernest/Documents/SparkEngine/src/Core/karbon_device.cpp
+CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj: CMakeFiles/SparkEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj -MF CMakeFiles\SparkEngine.dir\src\Core\karbon_device.cpp.obj.d -o CMakeFiles\SparkEngine.dir\src\Core\karbon_device.cpp.obj -c C:\Users\Ernest\Documents\SparkEngine\src\Core\karbon_device.cpp
+
+CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Ernest\Documents\SparkEngine\src\Core\karbon_device.cpp > CMakeFiles\SparkEngine.dir\src\Core\karbon_device.cpp.i
+
+CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ernest\Documents\SparkEngine\src\Core\karbon_device.cpp -o CMakeFiles\SparkEngine.dir\src\Core\karbon_device.cpp.s
+
 CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj: CMakeFiles/SparkEngine.dir/flags.make
 CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj: CMakeFiles/SparkEngine.dir/includes_CXX.rsp
 CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj: C:/Users/Ernest/Documents/SparkEngine/src/Core/pipeline.cpp
 CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj: CMakeFiles/SparkEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj -MF CMakeFiles\SparkEngine.dir\src\Core\pipeline.cpp.obj.d -o CMakeFiles\SparkEngine.dir\src\Core\pipeline.cpp.obj -c C:\Users\Ernest\Documents\SparkEngine\src\Core\pipeline.cpp
 
 CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.i: cmake_force
@@ -112,21 +127,6 @@ CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.i: cmake_force
 CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ernest\Documents\SparkEngine\src\Core\pipeline.cpp -o CMakeFiles\SparkEngine.dir\src\Core\pipeline.cpp.s
-
-CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj: CMakeFiles/SparkEngine.dir/flags.make
-CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj: CMakeFiles/SparkEngine.dir/includes_CXX.rsp
-CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj: C:/Users/Ernest/Documents/SparkEngine/src/Core/spark_device.cpp
-CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj: CMakeFiles/SparkEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Ernest\Documents\SparkEngine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj -MF CMakeFiles\SparkEngine.dir\src\Core\spark_device.cpp.obj.d -o CMakeFiles\SparkEngine.dir\src\Core\spark_device.cpp.obj -c C:\Users\Ernest\Documents\SparkEngine\src\Core\spark_device.cpp
-
-CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Ernest\Documents\SparkEngine\src\Core\spark_device.cpp > CMakeFiles\SparkEngine.dir\src\Core\spark_device.cpp.i
-
-CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ernest\Documents\SparkEngine\src\Core\spark_device.cpp -o CMakeFiles\SparkEngine.dir\src\Core\spark_device.cpp.s
 
 CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj: CMakeFiles/SparkEngine.dir/flags.make
 CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj: CMakeFiles/SparkEngine.dir/includes_CXX.rsp
@@ -162,8 +162,8 @@ CMakeFiles/SparkEngine.dir/src/main.cpp.s: cmake_force
 SparkEngine_OBJECTS = \
 "CMakeFiles/SparkEngine.dir/src/App/app.cpp.obj" \
 "CMakeFiles/SparkEngine.dir/src/App/window.cpp.obj" \
+"CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj" \
 "CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj" \
-"CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj" \
 "CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj" \
 "CMakeFiles/SparkEngine.dir/src/main.cpp.obj"
 
@@ -172,8 +172,8 @@ SparkEngine_EXTERNAL_OBJECTS =
 
 SparkEngine.exe: CMakeFiles/SparkEngine.dir/src/App/app.cpp.obj
 SparkEngine.exe: CMakeFiles/SparkEngine.dir/src/App/window.cpp.obj
+SparkEngine.exe: CMakeFiles/SparkEngine.dir/src/Core/karbon_device.cpp.obj
 SparkEngine.exe: CMakeFiles/SparkEngine.dir/src/Core/pipeline.cpp.obj
-SparkEngine.exe: CMakeFiles/SparkEngine.dir/src/Core/spark_device.cpp.obj
 SparkEngine.exe: CMakeFiles/SparkEngine.dir/src/Core/swapchain.cpp.obj
 SparkEngine.exe: CMakeFiles/SparkEngine.dir/src/main.cpp.obj
 SparkEngine.exe: CMakeFiles/SparkEngine.dir/build.make
