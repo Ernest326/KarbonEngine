@@ -400,15 +400,18 @@ uint32_t KarbonDevice::findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags
     }
   }
 
-  throw std::runtime_error("failed to find suitable memory type!");
+  throw std::runtime_error("Failed to find suitable memory type!");
 }
 
+//Create VBO
 void KarbonDevice::createBuffer(
     VkDeviceSize size,
     VkBufferUsageFlags usage,
     VkMemoryPropertyFlags properties,
     VkBuffer &buffer,
     VkDeviceMemory &bufferMemory) {
+
+  //Create Buffer Info
   VkBufferCreateInfo bufferInfo{};
   bufferInfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
   bufferInfo.size = size;
@@ -419,9 +422,11 @@ void KarbonDevice::createBuffer(
     throw std::runtime_error("failed to create vertex buffer!");
   }
 
+  //Memory allocation stuff
   VkMemoryRequirements memRequirements;
   vkGetBufferMemoryRequirements(device_, buffer, &memRequirements);
 
+  //Make memory allocation info
   VkMemoryAllocateInfo allocInfo{};
   allocInfo.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
   allocInfo.allocationSize = memRequirements.size;

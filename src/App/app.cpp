@@ -5,6 +5,7 @@
 namespace karbon {
 
 App::App() {
+    loadModels();
     createPipelineLayout();
     createPipeline();
     createCommandBuffers();
@@ -14,6 +15,7 @@ App::~App() {
     vkDestroyPipelineLayout(karbonDevice.device(), pipelineLayout, nullptr);
 }
 
+//Main loop for the entire thing! :D
 void App::run() {
 
     while(!window.shouldClose()) {
@@ -38,6 +40,17 @@ void App::createPipelineLayout() {
         throw std::runtime_error("Failed to create Pipeline Layout!");
     }
 }
+
+void App::loadModels() {
+    std::vector<VertexModel::Vertex> vertices {
+        {{0.0f, -0.5f}},
+        {{0.5f, 0.5f}},
+        {{-0.5f, 0.5f}}
+    };
+
+    vertexModel = std::make_unique<VertexModel>(karbonDevice, vertices);
+}
+
 void App::createPipeline() {
 
     auto pipelineConfig = Pipeline::defaultPipelineConfigInfo(karbonSwapChain.width(), karbonSwapChain.height());
@@ -92,7 +105,8 @@ void App::createCommandBuffers() {
         vkCmdBeginRenderPass(commandBuffers[i], &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
 
         karbonPipeline->bind(commandBuffers[i]);
-        vkCmdDraw(commandBuffers[i], 3, 1, 0, 0);
+        vertexModel->bind(commandBuffers[i]);
+        vertexModel->draw(commandBuffers[i]);
 
         vkCmdEndRenderPass(commandBuffers[i]);
         if(vkEndCommandBuffer(commandBuffers[i]) != VK_SUCCESS) {

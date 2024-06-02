@@ -9,6 +9,7 @@
 
 //VULKAN DEVICE INITIALIZATION
 //Important header which loads all the necessary Vulkan functions, defines the device and validates Vulkan support
+//Most of this stuff is boilerplate, and I don't fully understand it all xD (I love how verbose Vulkan is)
 
 namespace karbon {
 
@@ -107,6 +108,6 @@ class KarbonDevice {
 
   const std::vector<const char *> validationLayers = {"VK_LAYER_KHRONOS_validation"};
   const std::vector<const char *> deviceExtensions = {VK_KHR_SWAPCHAIN_EXTENSION_NAME};
+  
 };
-
-}  // namespace lve
+}

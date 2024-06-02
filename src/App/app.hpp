@@ -3,6 +3,7 @@
 #include "../Core/karbon_device.hpp"
 #include "../Core/pipeline.hpp"
 #include "../Core/swapchain.hpp"
+#include "../Core/vertex_model.hpp"
 #include "window.hpp"
 
 #include <memory>
@@ -25,18 +26,19 @@ public:
     void run();
 
 private:
+    void loadModels();
     void createPipelineLayout();
     void createPipeline();
     void createCommandBuffers();
     void drawFrame();
 
-    Window window{WIDTH, HEIGHT, "Spark!"};
+    Window window{WIDTH, HEIGHT, "Karbon V1.0.0"};
     KarbonDevice karbonDevice{window};
     KarbonSwapChain karbonSwapChain { karbonDevice, window.getExtent() };
     std::unique_ptr<Pipeline> karbonPipeline;
     VkPipelineLayout pipelineLayout;
     std::vector<VkCommandBuffer> commandBuffers;
+    std::unique_ptr<VertexModel> vertexModel;
 
 };
-
 }

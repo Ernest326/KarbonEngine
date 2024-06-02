@@ -1,6 +1,8 @@
 #pragma once
 
 #include "karbon_device.hpp"
+#include "vertex_model.hpp"
+
 #include <string>
 #include <vector>
 

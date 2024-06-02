@@ -46,7 +46,6 @@ void Pipeline::createGraphicsPipeline(const std::string& vert, const std::string
     createShaderModule(fragCode, &fragShaderModule);
 
     //Shader settings for the graphics pipeline
-
     VkPipelineShaderStageCreateInfo shaderStages[2];
     shaderStages[0].sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
     shaderStages[0].stage = VK_SHADER_STAGE_VERTEX_BIT;
@@ -63,12 +62,16 @@ void Pipeline::createGraphicsPipeline(const std::string& vert, const std::string
     shaderStages[1].pNext = nullptr;
     shaderStages[1].pSpecializationInfo = nullptr;
 
+    //Vertex buffer binding/attribute descriptions
+    auto bindingDescriptions = VertexModel::Vertex::getBindingDescriptions();
+    auto attributeDescriptions = VertexModel::Vertex::getAttributeDescriptions();
+
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
     vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
-    vertexInputInfo.vertexAttributeDescriptionCount = 0;
-    vertexInputInfo.vertexBindingDescriptionCount = 0;
-    vertexInputInfo.pVertexAttributeDescriptions = nullptr;
-    vertexInputInfo.pVertexBindingDescriptions = nullptr;
+    vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(attributeDescriptions.size());
+    vertexInputInfo.vertexBindingDescriptionCount = static_cast<uint32_t>(bindingDescriptions.size());;
+    vertexInputInfo.pVertexAttributeDescriptions = attributeDescriptions.data();
+    vertexInputInfo.pVertexBindingDescriptions = bindingDescriptions.data();
 
     VkPipelineViewportStateCreateInfo viewportInfo{};
     viewportInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
@@ -121,10 +124,11 @@ void Pipeline::bind(VkCommandBuffer commandBuffer) {
 //The default pipeline configuration, for now its hard-coded, might read from a config file in the future for convenience
 PipelineConfigInfo Pipeline::defaultPipelineConfigInfo(uint32_t width, uint32_t height) {
     PipelineConfigInfo configInfo{};
-    //Default Input Conifg, Triangles by default with no stripping
+    //Default Input Config, Triangles by default with no stripping
     configInfo.inputAssemblyInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
     configInfo.inputAssemblyInfo.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
     configInfo.inputAssemblyInfo.primitiveRestartEnable = VK_FALSE;
+
     //Default Viewport Settings
     configInfo.viewport.x = 0.0f;
     configInfo.viewport.y = 0.0f;
