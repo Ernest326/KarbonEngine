@@ -1,9 +1,12 @@
 #pragma once
 
+//Engine include
 #include "karbon_device.hpp"
 
 #include <vulkan/vulkan.h>
 
+//std lib includes
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -14,6 +17,7 @@ class KarbonSwapChain {
   static constexpr int MAX_FRAMES_IN_FLIGHT = 2;
 
   KarbonSwapChain(KarbonDevice &deviceRef, VkExtent2D windowExtent);
+  KarbonSwapChain(KarbonDevice &deviceRef, VkExtent2D windowExtent, std::shared_ptr<KarbonSwapChain> previous);
   ~KarbonSwapChain();
 
   KarbonSwapChain(const KarbonSwapChain &) = delete;
@@ -37,6 +41,7 @@ class KarbonSwapChain {
   VkResult submitCommandBuffers(const VkCommandBuffer *buffers, uint32_t *imageIndex);
 
  private:
+  void init();
   void createSwapChain();
   void createImageViews();
   void createDepthResources();
@@ -67,6 +72,7 @@ class KarbonSwapChain {
   VkExtent2D windowExtent;
 
   VkSwapchainKHR swapChain;
+  std::shared_ptr<KarbonSwapChain> oldSwapChain;
 
   std::vector<VkSemaphore> imageAvailableSemaphores;
   std::vector<VkSemaphore> renderFinishedSemaphores;

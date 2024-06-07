@@ -30,11 +30,14 @@ private:
     void createPipelineLayout();
     void createPipeline();
     void createCommandBuffers();
+    void freeCommandBuffers();
     void drawFrame();
+    void recreateSwapChain();
+    void recordCommandBuffer(int imageIndex);
 
     Window window{WIDTH, HEIGHT, "Karbon V1.0.0"};
     KarbonDevice karbonDevice{window};
-    KarbonSwapChain karbonSwapChain { karbonDevice, window.getExtent() };
+    std::unique_ptr<KarbonSwapChain> karbonSwapChain;
     std::unique_ptr<Pipeline> karbonPipeline;
     VkPipelineLayout pipelineLayout;
     std::vector<VkCommandBuffer> commandBuffers;

@@ -73,25 +73,18 @@ void Pipeline::createGraphicsPipeline(const std::string& vert, const std::string
     vertexInputInfo.pVertexAttributeDescriptions = attributeDescriptions.data();
     vertexInputInfo.pVertexBindingDescriptions = bindingDescriptions.data();
 
-    VkPipelineViewportStateCreateInfo viewportInfo{};
-    viewportInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
-    viewportInfo.viewportCount = 1;
-    viewportInfo.pViewports = &configInfo.viewport;
-    viewportInfo.scissorCount = 1;
-    viewportInfo.pScissors = &configInfo.scissor;
-
     VkGraphicsPipelineCreateInfo pipelineInfo{};
     pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
     pipelineInfo.stageCount = 2;
     pipelineInfo.pStages = shaderStages;
     pipelineInfo.pVertexInputState = &vertexInputInfo;
     pipelineInfo.pInputAssemblyState = &configInfo.inputAssemblyInfo;
-    pipelineInfo.pViewportState = &viewportInfo;
+    pipelineInfo.pViewportState = &configInfo.viewportInfo;
     pipelineInfo.pRasterizationState = &configInfo.rasterizationInfo;
     pipelineInfo.pMultisampleState = &configInfo.multisampleInfo;
     pipelineInfo.pColorBlendState = &configInfo.colorBlendInfo;
     pipelineInfo.pDepthStencilState = &configInfo.depthStencilInfo;
-    pipelineInfo.pDynamicState = nullptr; //Used to change stuff like viewport or line width dynamically, wont be messing with it probably
+    pipelineInfo.pDynamicState = &configInfo.dynamicStateInfo;
     pipelineInfo.layout = configInfo.pipelineLayout;
     pipelineInfo.renderPass = configInfo.renderPass;
     pipelineInfo.subpass = configInfo.subpass;
@@ -122,14 +115,15 @@ void Pipeline::bind(VkCommandBuffer commandBuffer) {
 }
 
 //The default pipeline configuration, for now its hard-coded, might read from a config file in the future for convenience
-PipelineConfigInfo Pipeline::defaultPipelineConfigInfo(uint32_t width, uint32_t height) {
+PipelineConfigInfo Pipeline::defaultPipelineConfigInfo(PipelineConfigInfo& configInfo) {
     PipelineConfigInfo configInfo{};
     //Default Input Config, Triangles by default with no stripping
     configInfo.inputAssemblyInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
     configInfo.inputAssemblyInfo.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
     configInfo.inputAssemblyInfo.primitiveRestartEnable = VK_FALSE;
 
-    //Default Viewport Settings
+    //Default Viewport Settings -- No longer needed since we are using a dynamic viewport
+    /*
     configInfo.viewport.x = 0.0f;
     configInfo.viewport.y = 0.0f;
     configInfo.viewport.width = static_cast<float>(width);
@@ -139,6 +133,13 @@ PipelineConfigInfo Pipeline::defaultPipelineConfigInfo(uint32_t width, uint32_t 
 
     configInfo.scissor.offset = {0, 0};
     configInfo.scissor.extent = {width, height};
+    */
+
+    configInfo.viewportInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
+    configInfo.viewportInfo.viewportCount = 1;
+    configInfo.viewportInfo.pViewports = nullptr;
+    configInfo.viewportInfo.scissorCount = 1;
+    configInfo.viewportInfo.pScissors = nullptr;
 
     //Default Rasterization Settings
     configInfo.rasterizationInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
@@ -195,7 +196,14 @@ PipelineConfigInfo Pipeline::defaultPipelineConfigInfo(uint32_t width, uint32_t 
     configInfo.depthStencilInfo.stencilTestEnable = VK_FALSE;
     configInfo.depthStencilInfo.front = {};  // Optional
     configInfo.depthStencilInfo.back = {};   // Optional
-    return configInfo;
+
+    configInfo.dynamicStateEnables = {VK_DYNAMIC_STATE_VIEWPORT, VK_DYNAMIC_STATE_SCISSOR};
+    configInfo.dynamicStateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO;
+    configInfo.dynamicStateInfo.pDynamicStates = configInfo.dynamicStateEnables.data();
+    configInfo.dynamicStateInfo.dynamicStateCount = static_cast<uint32_t>(configInfo.dynamicStateEnables.size());
+    configInfo.dynamicStateInfo.flags = 0;
+
+    //return configInfo;
 }
 
 }

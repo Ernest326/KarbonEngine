@@ -40,9 +40,9 @@ class KarbonDevice {
 
   // Not copyable or movable
   KarbonDevice(const KarbonDevice &) = delete;
-  void operator=(const KarbonDevice &) = delete;
   KarbonDevice(KarbonDevice &&) = delete;
-  KarbonDevice &operator=(KarbonDevice &&) = delete;
+  KarbonDevice& operator=(const KarbonDevice &) = delete;
+  KarbonDevice& operator=(KarbonDevice &&) = delete;
 
   VkCommandPool getCommandPool() { return commandPool; }
   VkDevice device() { return device_; }
